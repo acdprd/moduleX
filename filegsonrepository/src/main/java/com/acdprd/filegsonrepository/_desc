@@ -1,0 +1,4 @@
+class SampleStore(context: Context) {
+    private var localStore: LocalStore = FileLocalStore(context.filesDir)
+    private val someInteractor = BaseRepositoryInteractor(localStore)
+}

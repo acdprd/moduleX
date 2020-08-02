@@ -1,2 +1,3 @@
+include ':filegsonrepository'
 include ':app'
 rootProject.name = "ModuleX"

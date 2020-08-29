@@ -1,3 +1,5 @@
+include ':baseproject'
+include ':adapterandviews'
 include ':filegsonrepository'
 include ':app'
 rootProject.name = "ModuleX"

@@ -7,10 +7,6 @@ import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
 import com.acdprd.baseproject.behaviors.activity.ActivityBehavior.Companion.TRANSPARENT
 
-/**
- * by acdprd | 13.07.2020.
- */
-
 class FullScreenBehavior(@ColorRes val navigationBarColorRes: Int = TRANSPARENT) :
     ActivityBehavior {
 

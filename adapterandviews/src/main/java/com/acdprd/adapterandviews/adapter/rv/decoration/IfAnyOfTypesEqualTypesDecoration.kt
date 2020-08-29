@@ -6,9 +6,6 @@ import com.acdprd.adapterandviews.adapter.rv.BaseListItemAdapter
 import com.acdprd.adapterandviews.model.interfaces.IListItem
 import com.acdprd.adapterandviews.model.interfaces.IViewType
 
-/**
- * by acdprd | 25.06.2020.
- */
 
 class IfAnyOfTypesEqualTypesDecoration<LIST_ITEM, VIEW_TYPE>(
     var adapter: BaseListItemAdapter<LIST_ITEM, VIEW_TYPE>?,

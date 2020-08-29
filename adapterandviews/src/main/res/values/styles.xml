@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BackgroundBorderless">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="BackgroundBorder">
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+</resources>

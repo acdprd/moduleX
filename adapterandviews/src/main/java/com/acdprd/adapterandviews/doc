@@ -1,0 +1,25 @@
+-------add enum (view types), : IViewType-------
+ex:
+    enum class ViewType : IViewType{
+        UNDEFINED,
+        FIRST,
+        SECOND;
+
+        override fun getType(): Int = ordinal
+    }
+
+
+-------add interface (aka ListItem) : IListItem<:IViewType>-------
+ ex:
+    interface ListItem : IListItem<ViewType>
+
+
+-------add adapter-------
+- viewTypeFinder mapper<Int,ViewType> && mapper<ViewType,Int>
+
+ex:
+    abstract class ItemAdapter : BaseItemAdapter<ViewType>() {
+        override fun getViewTypeFinder(): IFindViewType<ViewType> {
+            return ViewTypeFinder(ViewType.values())
+        }
+    }

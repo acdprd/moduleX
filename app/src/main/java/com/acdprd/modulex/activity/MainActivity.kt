@@ -1,21 +1,22 @@
-package com.acdprd.modulex
+package com.acdprd.modulex.activity
 
-import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
-import com.acdprd.filegsonrepository.BaseRepositoryInteractor
+import com.acdprd.baseproject.activity.CustomBindingActivity
 import com.acdprd.filegsonrepository.FileLocalStore
+import com.acdprd.modulex.R
+import com.acdprd.modulex.databinding.ActivityMainBinding
 import com.google.gson.reflect.TypeToken
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.Action
 import io.reactivex.functions.Consumer
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : CustomBindingActivity<ActivityMainBinding>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
-        makeStore()
+    override fun getLayoutRes(): Int = R.layout.activity_main
+    override fun getHostFragmentId(): Int = R.id.hostFragment
+
+    override fun create() {
+
     }
 
     private fun makeStore() {

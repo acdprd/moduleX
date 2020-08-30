@@ -10,11 +10,8 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.acdprd.baseproject.helpers.ArgsBuilder
-import kotlin.reflect.KFunction
+import com.acdprd.baseproject.utils.ArgsBuilder
 
 abstract class CustomBaseFragment<B : ViewDataBinding> : Fragment() {
     protected lateinit var binding: B

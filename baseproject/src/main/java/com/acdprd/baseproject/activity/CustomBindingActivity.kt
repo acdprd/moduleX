@@ -7,7 +7,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
-import com.acdprd.baseproject.helpers.HideKeyboard
+import com.acdprd.baseproject.utils.HideKeyboard
 
 @Suppress("MemberVisibilityCanBePrivate")
 abstract class CustomBindingActivity<B : ViewDataBinding> : CustomBaseActivity() {

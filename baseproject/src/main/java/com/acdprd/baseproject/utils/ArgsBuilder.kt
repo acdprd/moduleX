@@ -1,4 +1,4 @@
-package com.acdprd.baseproject.helpers
+package com.acdprd.baseproject.utils
 
 import android.os.Bundle
 import java.io.Serializable

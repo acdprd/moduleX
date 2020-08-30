@@ -1,8 +1,8 @@
 package com.acdprd.baseproject.behaviors.insets
 
 import android.view.View
-import com.acdprd.baseproject.helpers.extensions.addSystemTopBottomPadding
-import com.acdprd.baseproject.helpers.extensions.addSystemTopPadding
+import com.acdprd.baseproject.utils.extensions.addSystemTopBottomPadding
+import com.acdprd.baseproject.utils.extensions.addSystemTopPadding
 
 
 /**

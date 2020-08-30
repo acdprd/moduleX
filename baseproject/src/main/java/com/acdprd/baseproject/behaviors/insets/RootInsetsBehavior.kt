@@ -1,11 +1,10 @@
 package com.acdprd.baseproject.behaviors.insets
 
-import android.util.Log
 import android.view.View
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
-import com.acdprd.baseproject.helpers.extensions.doOnApplyWindowInsets
-import com.acdprd.baseproject.helpers.extensions.updatePaddings
+import com.acdprd.baseproject.utils.extensions.doOnApplyWindowInsets
+import com.acdprd.baseproject.utils.extensions.updatePaddings
 
 
 /**

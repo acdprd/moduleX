@@ -1,3 +1,6 @@
+todo rework into
+IReader \ IWriter \ IStore:IReader,IWriter \ preparer : gson or file or \
+
 class SampleStore(context: Context) {
     private var localStore: LocalStore = FileLocalStore(context.filesDir)
     private val someInteractor = BaseRepositoryInteractor(localStore)

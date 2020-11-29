@@ -42,6 +42,7 @@ dependencies {
     implementation project(path: ':adapterandviews')
     implementation project(path: ':baseproject')
     implementation project(path: ':social')
+    implementation project(path: ':image_utils')
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'

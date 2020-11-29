@@ -1,0 +1,77 @@
+>>base: vk,fb g
+
+  init: private socialManager:SocialManager = *SocialManager();
+  userClick() -> socialManager.start()
+
+  override onActivityResult(int requestCode, int resultCode, Intent data) {
+  super.onActivityResult(requestCode, resultCode, data);
+  socialManager.handleOnActivityResult(getContext(), requestCode, resultCode, data);
+
+>>vk
+
+=  +init
+  app{
+   private VKAccessTokenTracker vkatt;
+       create{
+           initVk()
+       }
+
+   private fun initVK() {
+       vkatt = object : VKAccessTokenTracker() {
+           override fun onVKAccessTokenChanged(oldToken: VKAccessToken?, newToken: VKAccessToken?) {
+               if (newToken == null) {
+                   val intent = VkSocialManager.Companion.getIntentToLogin(getApplicationContext())
+                   startActivity(intent)
+               }
+           }
+       }
+       vkatt.startTracking()
+       VKSdk.initialize(getApplicationContext())
+   }
+
+=  add socials appId\key
+
+  <integer name="com_vk_sdk_AppId">1111111</integer>
+  <string name="secret_key">AAAA1AaaAAAaaAAAaaAA</string>
+
+=  add to manifest
+
+    <activity
+    android:name="com.vk.sdk.VKServiceActivity"
+    android:label="ServiceActivity"
+    android:theme="@style/VK.Transparent" />
+
+>>fb
+
+= add socials appId\key
+
+  <string name="facebook_app_id">1111111111111111</string>
+  <string name="fb_login_protocol_scheme">fb1111111111111111</string>
+
+== add to manifest
+  <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter><action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+>> g
+
+= add appId\key
+    <string name="server_client_id" tools:ignore="TypographyDashes">111111111111-1aaaaaaaaaaaaaaaa11aa1aaa1aa1a1a.apps.googleusercontent.com</string>
+
+    to constructor

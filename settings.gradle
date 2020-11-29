@@ -1,3 +1,4 @@
+include ':social'
 include ':baseproject'
 include ':adapterandviews'
 include ':filegsonrepository'

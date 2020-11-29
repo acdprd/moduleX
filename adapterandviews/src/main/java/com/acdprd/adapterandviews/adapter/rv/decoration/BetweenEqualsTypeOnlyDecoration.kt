@@ -17,15 +17,15 @@ class BetweenEqualsTypeOnlyDecoration<LIST_ITEM, VIEW_TYPE>(
 
     b.getDivider = { prev, next ->
         when {
-            type == null && (prev == next) && (exceptTypes.none { it == prev || it == next }) -> divider
-            type != null && (prev == type && next == type) -> divider
+            type == null && (prev as IViewType == next) && (exceptTypes.none { it == prev || it == next }) -> divider
+            type != null && (prev as IViewType == type && next as IViewType == type) -> divider
             else -> null
         }
     }
     b.getOffset = { prev, next ->
         when {
-            type == null && (prev == next) && (exceptTypes.none { it == prev || it == next }) -> offset
-            type != null && (prev == type && next == type) -> offset
+            type == null && (prev as IViewType == next) && (exceptTypes.none { it == prev || it == next }) -> offset
+            type != null && (prev as IViewType == type && next as IViewType == type) -> offset
             else -> 0
         }
     }

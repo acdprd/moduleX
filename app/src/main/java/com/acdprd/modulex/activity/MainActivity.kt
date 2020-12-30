@@ -4,6 +4,7 @@ import android.util.Log
 import com.acdprd.baseproject.activity.CustomBindingActivity
 import com.acdprd.filegsonrepository.FileLocalStore
 import com.acdprd.modulex.R
+import com.acdprd.modulex.databinding.ActivityMain2Binding
 import com.acdprd.modulex.databinding.ActivityMainBinding
 import com.google.gson.reflect.TypeToken
 import io.reactivex.android.schedulers.AndroidSchedulers

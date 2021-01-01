@@ -15,5 +15,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     private fun setListeners() {
         binding.tvToList.setOnClickListener { findNavController().navigate(R.id.action_forward_list) }
         binding.tvToViewBinding.setOnClickListener { findNavController().navigate(R.id.action_forward_vb) }
+        binding.tvToViewBindingList.setOnClickListener { findNavController().navigate(R.id.action_forward_vb_list) }
     }
 }

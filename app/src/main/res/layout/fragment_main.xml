@@ -21,5 +21,13 @@
             android:layout_height="wrap_content"
             android:padding="8dp" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToViewBindingList"
+            android:text="to view bind list frg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

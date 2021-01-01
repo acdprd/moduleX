@@ -2,8 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/mainFragment"
-    android:id="@+id/navigation_graph">
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
 
     <fragment
         android:id="@+id/mainFragment"
@@ -26,6 +26,14 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
+        <action
+            android:id="@+id/action_forward_vb_list"
+            app:destination="@id/viewBindListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
     </fragment>
 
     <fragment
@@ -40,6 +48,14 @@
         android:id="@+id/viewBindFragment"
         android:name="com.acdprd.modulex.fragment.ViewBindingFragment"
         tools:layout="@layout/fragment_vb">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewBindListFragment"
+        android:name="com.acdprd.modulex.fragment.ViewBindingListFragment"
+        tools:layout="@layout/fragment_view_binding_list">
 
 
     </fragment>

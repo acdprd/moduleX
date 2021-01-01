@@ -13,3 +13,9 @@ abstract class ItemAdapter : BaseListItemAdapter<ListItem, Const.ViewType>() {
         ViewTypeFinder(Const.ViewType.values())
 
 }
+
+abstract class ItemBAdapter : BaseListItemBAdapter<ListItem, Const.ViewType>() {
+    override fun getViewTypeFinder(): IFindViewType<Const.ViewType> =
+        ViewTypeFinder(Const.ViewType.values())
+
+}

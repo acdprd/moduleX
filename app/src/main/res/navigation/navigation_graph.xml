@@ -34,6 +34,14 @@
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
 
+        <action
+            android:id="@+id/action_forward_use_case"
+            app:destination="@id/useCaseFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
     </fragment>
 
     <fragment
@@ -56,6 +64,14 @@
         android:id="@+id/viewBindListFragment"
         android:name="com.acdprd.modulex.fragment.ViewBindingListFragment"
         tools:layout="@layout/fragment_view_binding_list">
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/useCaseFragment"
+        android:name="com.acdprd.modulex.fragment.UseCaseFragment"
+        tools:layout="@layout/fragment_use_case">
 
 
     </fragment>

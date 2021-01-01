@@ -28,6 +28,13 @@
             android:layout_height="wrap_content"
             android:padding="8dp" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvToUseCase"
+            android:text="to use case"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>

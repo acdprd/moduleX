@@ -109,16 +109,14 @@ class BindingByReflectionProperty<TR, BP, VB : ViewBinding>(
 
     //todo w/ lifecycle
     override fun getValue(thisRef: TR, property: KProperty<*>): VB {
-        val _f = field
-        if (_f != null) {
-            return _f
-        } else {
+        field?.let {
+            return it
+        } ?: let {
             val param = bindingParam.invoke(thisRef)
             return binder.invoke(param).also {
                 field = it
             }
         }
-
     }
 }
 
